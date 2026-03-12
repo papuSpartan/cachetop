@@ -96,7 +96,7 @@ class LVMCacheMonitor:
             pool_cmd = [
                 'sudo', 'lvs', '--noheadings', '--nosuffix', '--units', 'b',
                 '-o', 'lv_size',
-                f'{self.vg_name}/games_cache_cpool'
+                f'{self.vg_name}/{self.lv_name}'
             ]
             
             pool_result = subprocess.run(pool_cmd, capture_output=True, text=True, check=True)
